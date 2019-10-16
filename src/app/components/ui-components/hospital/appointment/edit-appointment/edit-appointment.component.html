@@ -1,0 +1,26 @@
+<div class="container" style="margin-top: 10px">
+
+    <div class="card-header">
+        <h3>Edit Hospital</h3>
+    </div>
+
+    <div clas="card">
+
+        <div class="card-body">
+            <form (ngSubmit)="onSubmit()" #appointmentForm="ngForm">
+
+              <div class="form-group">
+                <label for="hospitalName">Hospital Name</label>
+                <input type="text" id="hospitalName" required [(ngModel)]="appointment.hospitalName"
+                       name="hospitalName" class="form-control" />
+              </div>
+                <div>
+                  <button type="submit" [disabled]="appointmentForm.form.invalid" class="btn btn-primary col-sm-12 col-md-2"
+                          style="margin-right:5px; margin-bottom: 5px" routerLink="hospitals">Save</button>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container-fluid">
+
+     <div>
+        <h4 style="float: left; margin-top:10px; margin-bottom:10px;" href="#" >Hospitals</h4>
+    </div>
+    <div>
+        <a class="btn btn-dark" style="color: white; float: right; margin-top:10px; margin-bottom:10px;" href="#"
+            routerLink="/hospitals/new">Create Hospital</a>
+    </div>
+   
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Hospital Name</th>
+                <th><i class="fa fa-eye fa-2x"></i></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let appointment of appointments">
+            <tr>
+                <td>{{appointment.hospitalName}}</td>
+                <td><a class="btn btn-dark" style="color: white" (click)="viewAppoinement(appointment.hospitalId)">Edit</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
